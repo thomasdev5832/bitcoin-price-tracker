@@ -2,14 +2,14 @@ import Input, { InputProps } from "./Input";
 
 export default function AmountInput(props:InputProps) {
     return (
-        <div className="flex items-center bg-neutral-800 border border-white/5 rounded-md">
+        <div className="flex items-center bg-neutral-900 border border-neutral-600 rounded-md hover:border-orange-500 focus:border-orange-500">
             <Input
                 placeholder="Amount"
-                className="border-0 w-24 pl-4 bg-transparent focus:outline-none"
+                className="w-24 pl-4 bg-transparent text-lg font-semibold "
                 value={props.value} 
                 onChange={props.onChange} 
             />
-            <span className="text-white/50 px-2 pr-4">USD</span>
+            <span className="text-white/80 px-2 pr-6 ">USD</span>
         </div>
     );
 }
