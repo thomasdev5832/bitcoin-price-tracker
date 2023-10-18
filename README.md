@@ -1,27 +1,56 @@
-# React + TypeScript + Vite
+<p align="center">
+  <a href="" rel="noopener">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2 align="center">Bitcoin Price Tracker</h2>
 
-Currently, two official plugins are available:
+<div align="center">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Status](https://img.shields.io/badge/status-active-success.svg)
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+<p align="center">A Bitcoin price comparison app that finds the cheapest price on 4 different exchanges. 
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Was used for this project React.js with Typescript, Tailwind for styling, and AirCode for back-end.
+    <br> 
+    <br>
+</p>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[Project link]()
+
+---
+
+
+### Features
+
+- **Price Comparison:** Quickly and efficiently find the lowest Bitcoin prices across four different exchanges.
+- **User-friendly Interface:** The application offers an intuitive and user-friendly.
+
+### Installation
+
+1. Clone the repository: `git clone https://github.com/thomasdev5832/bitcoin-price-tracker`
+2. Navigate to the project directory: `cd bitcoin-price-tracker`
+3. Install dependencies: `npm install`
+4. Run the application: `npm run dev`
+
+### ⛏️ Stack <a name = "stack"></a>
+
+- [ReactJS](https://react.dev/) - JavaScript library
+- [Tailwind](https://tailwindcss.com/) - CSS framework
+- [TypeScript](https://www.typescriptlang.org/) - Programming Language
+- [AirCode](https://aircode.io/) - Backend
+
+---
+
+<div align="center">
+
+✍️ [Gabriel Thome](https://github.com/thomasdev5832/) 
+
+<br />
+
+📝[MIT License](https://opensource.org/license/mit/) 
+
+</div>
