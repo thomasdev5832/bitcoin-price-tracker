@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './index.css'
 import AmountInput from './AmountInput';
 import ResultRow from './ResultRow';
+import LoadingSkeleton from './LoadingSkeleton';
 import axios from 'axios';
 import {sortBy} from 'lodash';
 import  useDebouncedEffect  from  'use-debounced-effect';
@@ -11,13 +12,12 @@ type CachedResult = {
   btc: string;
 };
 
-type OfferResults = {
-  [keys:string]:string;
-}
+type OfferResults = {[keys:string]:string};
 
 const defaultAmount = '100';
 
 function App() {
+
   const [prevAmount, setPrevAmount] = useState(defaultAmount);
   const [amount, setAmount] = useState('100');
   const [cachedResults, setCachedResults] = useState<CachedResult[]>([]);
@@ -48,17 +48,18 @@ function App() {
     }
   }, 300, [amount]);
 
-  const sortedCache = sortBy(cachedResults, 'btc').reverse();
-  const sortedResults:CachedResult = sortBy(Object.keys(offerResults).map(provider => ({
+  const sortedCache:CachedResult[] = sortBy(cachedResults, 'btc').reverse();
+  const sortedResults:CachedResult[] = sortBy(Object.keys(offerResults).map(provider => ({
       provider, 
       btc:offerResults[provider]
   })), 'btc').reverse();
 
   const showCached = amount === defaultAmount;
+  const rows = showCached ? sortedCache : sortedResults;
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className='uppercase text-3xl text-center font-thin font-sans text-orange-500'>Find cheapest BTC</h1>
+      <h1 className='uppercase text-3xl text-center font-semibold font-sans text-orange-500'>Find cheapest BTC</h1>
       <div className='flex justify-center m-4'>
         <AmountInput 
          value={amount} 
@@ -67,26 +68,14 @@ function App() {
       </div>
       <div className='mt-6'>
         {loading && (
-            <>
-              <ResultRow loading={true} />
-              <ResultRow loading={true} />
-              <ResultRow loading={true} />
-              <ResultRow loading={true} />
-            </>
+            <LoadingSkeleton />
         )}
-        {!loading && showCached && sortedCache.map((result:CachedResult) => (
+        {!loading && rows.map(result => (
             <ResultRow 
               key={result.provider}
               providerName={result.provider} 
               btc={result.btc}
             />
-        ))}
-        {!loading && !showCached && sortedResults.map(result => (
-            <ResultRow 
-            key={result.provider}
-            providerName={result.provider} 
-            btc={result.btc}
-          />
         ))}
       </div>
     </main>

@@ -23,7 +23,10 @@ const logos:{[keys:string]:Logo} = {
 
 export default function ResultRow({loading, providerName, btc}: ResultRowProps) {
     return (
-        <div className=" relative cursor-pointer p-4 m-2 border border-orange-500 rounded  bg-orange-500 hover:bg-neutral-900 hover:border-orange-500 transition duration-150 ease-out hover:ease-in overflow-hidden">
+        <a 
+            href={`https://${providerName}.com`}
+            target="_blank"
+            className="block relative cursor-pointer p-4 m-2 border border-orange-500 rounded  bg-orange-500 hover:bg-neutral-900 hover:border-orange-500 transition duration-150 ease-out hover:ease-in overflow-hidden">
             <div className="flex gap-4">
                
                     {providerName && (
@@ -51,6 +54,6 @@ export default function ResultRow({loading, providerName, btc}: ResultRowProps) 
             {loading && (
                 <div className="inset-0 absolute"></div>
             )}
-        </div>
+        </a>
     );
 }
