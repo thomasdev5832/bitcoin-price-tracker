@@ -59,7 +59,7 @@ function App() {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className='uppercase text-3xl text-center font-semibold font-sans text-orange-500'>Find cheapest BTC</h1>
+      <h1 className='m-4 uppercase text-6xl text-center font-bold font- bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-clip-text text-transparent'>Find cheapest BTC</h1>
       <div className='flex justify-center m-4'>
         <AmountInput 
          value={amount} 
