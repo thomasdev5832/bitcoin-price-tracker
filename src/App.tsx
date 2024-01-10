@@ -79,7 +79,7 @@ function App() {
         ))}
       </div>
       <div className='mt-20 flex justify-center'>
-        <img src="./assets/bitcoin-img.svg" alt="" />
+        <img src="https://bitcoin.org/img/home/bitcoin-img.svg?1702235293" alt="" />
       </div>
       <div className='mx-auto pt-10'>
         <h3 className='text-center font-medium'>Learn more about Bitcoin in:</h3>
