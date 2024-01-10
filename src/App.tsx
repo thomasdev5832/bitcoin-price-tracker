@@ -59,14 +59,14 @@ function App() {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className='m-10  text-5xl  text-center font-light text-zinc-700'>Discover the Absolute Lowest Prices for BTC!</h1>
+      <h1 className='m-6  text-5xl  text-center font-light text-zinc-700'>Discover the Absolute Lowest Prices for BTC!</h1>
       <div className='flex justify-center m-4'>
         <AmountInput 
          value={amount} 
           onChange={e => setAmount(e.target.value)} 
         />
       </div>
-      <div className='mt-6'>
+      <div className='mt-8'>
         {loading && (
             <LoadingSkeleton />
         )}
@@ -83,6 +83,12 @@ function App() {
         <p className='text-center font-semibold text-orange-600'>
         <a  href="https://bitcoin.org/en/">www.bitcoin.org</a>
         </p>
+        <div className='m-auto flex justify-center mt-10'> 
+          <a className='flex justify-center' target="_blank"  href="https://github.com/thomasdev5832">
+            Made with 🧡 by
+            <img className='ml-1 w-6 h-6 flex justify-center' src="./src/assets/github-mark.svg" alt="" />
+          </a>
+        </div>
       </div>
     </main>
   )
