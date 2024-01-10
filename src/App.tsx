@@ -59,7 +59,7 @@ function App() {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className='m-6  text-5xl  text-center font-light text-zinc-700'>Discover the Absolute Lowest Prices for BTC!</h1>
+      <h1 className='m-6  text-4xl  text-center font-light text-zinc-700'>Discover the Absolute Lowest Prices for BTC!</h1>
       <div className='flex justify-center m-4'>
         <AmountInput 
          value={amount} 
