@@ -19,7 +19,7 @@ Was used for this project React.js with Typescript, Tailwind for styling, and Ai
     <br>
 </p>
 
-[Project link]()
+[Project link](https://bitcoin-price-tracker-v1.vercel.app/)
 
 ---
 
