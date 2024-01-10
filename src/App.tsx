@@ -59,7 +59,7 @@ function App() {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className='m-4 uppercase text-6xl text-center font-bold font- bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-clip-text text-transparent'>Find cheapest BTC</h1>
+      <h1 className='m-10  text-5xl  text-center font-light text-zinc-700'>Discover the Absolute Lowest Prices for BTC!</h1>
       <div className='flex justify-center m-4'>
         <AmountInput 
          value={amount} 
@@ -77,6 +77,12 @@ function App() {
               btc={result.btc}
             />
         ))}
+      </div>
+      <div className='mx-auto pt-10'>
+        <h3 className='text-center font-medium'>Learn about Bitcoin in:</h3>
+        <p className='text-center font-semibold text-orange-600'>
+        <a  href="https://bitcoin.org/en/">www.bitcoin.org</a>
+        </p>
       </div>
     </main>
   )
